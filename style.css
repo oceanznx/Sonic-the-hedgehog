@@ -15,15 +15,11 @@
 
 @keyframes fundo {
 
-from {
- background-color: darkblue;
+  0% {background-color: #09163b;}
+  50% {background-color: #040c22;}
+  100% {background-color: #09163b;}
 
-}
 
-to {
-background-color: cornflowerblue
-
-}
 
 }
 
@@ -34,6 +30,9 @@ body {
     background-color: rgb(11, 11, 95);
     font-family: "poppins";
     z-index: 0;
+    animation-name: fundo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
    
 }
 
@@ -48,7 +47,7 @@ li, a, button {
 
 
 header {
-   background-color: rgb(29, 29, 139);
+   background-color: rgb(10, 10, 65);
    width: 100%;
     display: flex;
     justify-content: space-between;
@@ -124,7 +123,7 @@ h1 {
   padding-left: 800px;
     animation-name: animação;
   animation-duration: 1s;
-  text-shadow: 2px 0 2px;
+  
 
     
 }
@@ -227,15 +226,10 @@ border-radius: 15px;
       opacity: 90%;
     }
 
-
-
-
-
-
-
-
-     
-
-
-
+audio {
+ opacity: 2%;
+display: flex;
+border-radius: 50px;
+padding: 20px 22px;
+color: #09163b;
 
