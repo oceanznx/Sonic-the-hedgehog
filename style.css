@@ -1,7 +1,31 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,403;1,14..32,403&family=Poppins:wght@400;500;700&display=swap');
 
+
+@keyframes animação {
+
+    from {opacity: 20%; scale: 92%;
+
+    }
+    to {opacity: 100%; scale: 100%;
+    }
+
+
+}
+
+@keyframes fundo {
+
+from {
+ background-color: darkblue;
+
+}
+
+to {
+background-color: cornflowerblue
+
+}
+
+}
 
 body {
     box-sizing: border-box;
@@ -9,13 +33,17 @@ body {
     padding: 0;
     background-color: rgb(11, 11, 95);
     font-family: "poppins";
+    z-index: 0;
+   
 }
 
 li, a, button {
     font-size: 15px;
     color: aliceblue;
     text-decoration: none;   
-
+      animation-name: animação;
+  animation-duration: 1s;
+  
 }
 
 
@@ -26,17 +54,22 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 15px;
-    box-shadow: 50px;
-    border-radius: 10px;
-    position: sticky;
-    top: 0;
-    opacity: 98%;
+    box-shadow: 0px 0px 10px;
+    position: sticky; top: 0;
+   z-index: 2;
+    
+    opacity: 99%;
+  
+  
 }
 
 .logotipo {
     color: aliceblue;
     font-size: 30px;
     font-weight: bold;
+      animation-name: animação;
+  animation-duration: 1s;
+  
    
 
 }
@@ -58,6 +91,8 @@ header {
 .nav-link li a:hover {
  color: rgb(153, 153, 223);
  opacity: 10;
+ scale: 80%;
+ 
   
 }
 
@@ -69,6 +104,10 @@ button {
     cursor: pointer;
     position: relative;
     right: 30px;
+      animation-name: animação;
+  animation-duration: 1s;
+  
+   
 }
 
 
@@ -76,38 +115,127 @@ button {
 
 button:hover {
     background-color: rgb(247, 74, 103);
+    scale: 120%;
 }
 
-h1 {color: aliceblue;
-  padding-left: 569px;
+h1 {
+    z-index: 0;
+  color: aliceblue;
+  padding-left: 800px;
+    animation-name: animação;
+  animation-duration: 1s;
+  text-shadow: 2px 0 2px;
+
     
-}
-
-img {
-    border-radius: 20px;
-    width: 500px;
-    height: 400px;
-   position: relative;
-   right: 435px;
-   border: 5px solid rgb(168, 40, 40);
-   position: relative;
-   top: 50px;
-   align-content: flex-start;
-   
 }
 
 h3 {
     color: aliceblue;
     text-align: center;
+    position: relative;
+      animation-name: animação;
+  animation-duration: 1s;
+   z-index: 0;
+  
+    
+    top: 120px;
 }
 
 h4 {
     color: aliceblue;
-    text-align: center; 
-   position: relative;
-    right: 30px;
-    position: relative;
-    bottom: 350px;
-    justify-content: center;
+text-align: center;
+background-color: rgb(0, 0, 27); width: 1000px;
+position: relative; top: 250px;
+  animation-name: animação;
+  animation-duration: 1s;
+position: relative;
+left: 420px;
+border-radius: 15px;
+ z-index: 0;
 
 }
+
+.img1 {
+    border-radius: 20px;
+    width: 500px;
+    height: 400px;
+    position: relative; top:150px;
+   border: 5px solid rgb(168, 40, 40);
+   box-shadow: 0 0 10px;
+    z-index: 0;
+   
+}
+
+.img2 {
+ border-radius: 20px;
+    width: 500px;
+    height: 400px;
+    position: relative; top: 270px;
+   border: 5px solid rgb(168, 40, 40);
+   position: relative;
+   left: 700px;
+ animation-name: animação;
+  animation-duration: 1s;
+  box-shadow: 0 0 10px color(white);
+   z-index: 0;
+
+}
+
+.img3 {
+ border-radius: 20px;
+    width: 500px;
+    height: 400px;
+    position: relative; top: 270px;
+   border: 5px solid rgb(168, 40, 40);
+   position: relative;
+   left: 700px;
+ animation-name: animação;
+  animation-duration: 1s;
+  box-shadow: 0 0 10px color(white);
+   z-index: 0;
+  
+
+}
+
+.img4 {
+ border-radius: 20px;
+    width: 500px;
+    height: 400px;
+    position: relative; top: 270px;
+   border: 5px solid rgb(168, 40, 40);
+   position: relative;
+   left: 700px;
+ animation-name: animação;
+  animation-duration: 1s;
+  box-shadow: 0 50 20px 
+    
+
+  }
+
+  @media (width-max: 800px ) {
+
+    li, a, button, h1 { font-size: 12px; }
+
+  }
+
+  footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: aliceblue;
+      position: relative; top: 370px;
+      opacity: 90%;
+    }
+
+
+
+
+
+
+
+
+     
+
+
+
+
