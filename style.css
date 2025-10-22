@@ -15,9 +15,9 @@
 
 @keyframes fundo {
 
-  0% {background-color: #09163b;}
+  0% {background-color: #0b1d4d;}
   50% {background-color: #02091b;}
-  100% {background-color: #09163b;}
+  100% {background-color: #0b1d4d;}
 
 
 
@@ -25,38 +25,40 @@
 
 body {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 0px;
     background-color: rgb(11, 11, 95);
     font-family: "poppins";
     z-index: 0;
     animation-name: fundo;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    max-width: 1000px;
+    
+   
 }
 
 li, a, button {
     font-size: 15px;
     color: aliceblue;
     text-decoration: none;   
-      animation-name: animação;
-  animation-duration: 1s;
+    
   
 }
 
 
 header {
    background-color: rgb(10, 10, 65);
-   width: 1865px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 15px;
-    box-shadow: 0px 0px 10px;
+    box-shadow: 2px 4px 10px;
     position: sticky; top: 0;
-   z-index: 2;
+   z-index: 5;
     opacity: 97%;
+       animation-name: animação;
+  animation-duration: 1s;
+  
   
   
 }
@@ -68,7 +70,6 @@ header {
       animation-name: animação;
   animation-duration: 1s;
   
-   
 
 }
 
@@ -102,8 +103,7 @@ button {
     cursor: pointer;
     position: relative;
     right: 30px;
-      animation-name: animação;
-  animation-duration: 1s;
+   
   
    
 }
@@ -122,23 +122,18 @@ h1 {
   text-align: center;
     animation-name: animação;
   animation-duration: 1s;
-  position: relative;
-    left: 102px;
-    position: relative;
-    left: 450px;
-
+  
     
 }
 
 h3 {
-    position: relative;
-    left: 450px;
+  
     color: aliceblue;
     text-align: center;
       animation-name: animação;
   animation-duration: 1s;
    z-index: 0;
-    top: 120px;
+   
 }
 
 h4 {
@@ -156,15 +151,19 @@ border-radius: 15px;
 }
 
 .img1 {
-    border-radius: 20px;
+  animation-name: animação;
+  animation-duration: 1s;
+border-radius: 20px;
     width: 500px;
     height: 400px;
-    position: relative; top:150px;
+    position: relative; top: 270px;
    border: 5px solid rgb(168, 40, 40);
-   box-shadow: 0 0 10px;
-    z-index: 0;
-   
+   position: relative;
+   left: 700px;
+   z-index: 0;
+
 }
+
 
 .img2 {
  border-radius: 20px;
@@ -176,7 +175,6 @@ border-radius: 15px;
    left: 700px;
  animation-name: animação;
   animation-duration: 1s;
-  box-shadow: 0 0 10px color(white);
    z-index: 0;
 
 }
@@ -212,9 +210,10 @@ border-radius: 15px;
 
   }
 
-  @media (width-max: 800px ) {
+  @media
+  (width-max: 768px ) {
 
-    li, a, button, h1 { font-size: 12px; }
+    li, button, a { font-size: 8px; }
 
   }
 
@@ -225,8 +224,7 @@ border-radius: 15px;
       color: aliceblue;
       position: relative; top: 370px;
       opacity: 80%;
-      position: relative;
-      left: 450px;
+     
     }
 
 audio {
