@@ -33,7 +33,7 @@ body {
     animation-name: fundo;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    max-width: 1200px;
+    max-width: 1000px;
 }
 
 li, a, button {
@@ -119,24 +119,25 @@ button:hover {
 h1 {
     z-index: 0;
   color: aliceblue;
-  padding-left: 800px;
+  text-align: center;
     animation-name: animação;
   animation-duration: 1s;
-  
+  position: relative;
+    left: 102px;
+    position: relative;
+    left: 450px;
 
     
 }
 
 h3 {
     position: relative;
-    left: 350px;
+    left: 450px;
     color: aliceblue;
     text-align: center;
       animation-name: animação;
   animation-duration: 1s;
    z-index: 0;
-  
-    
     top: 120px;
 }
 
@@ -225,7 +226,7 @@ border-radius: 15px;
       position: relative; top: 370px;
       opacity: 80%;
       position: relative;
-      left: 350px;
+      left: 450px;
     }
 
 audio {
@@ -235,3 +236,4 @@ border-radius: 50px;
 padding: 20px 22px;
 color: #09163b;
 position: fixed;
+}
