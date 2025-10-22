@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b1d4d;
+  color: white;
+  animation: fundo 4s infinite;
+}
+
+header {
+  background: #0a0a41;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  animation-name: animação;
+  animation-duration: 1s;
+ 
+}
+
+.logotipo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-link {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-link a:hover {
+  color: #7db7ff;
+}
+
+
+main {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  animation-name: animação;
+  animation-duration: 1s;
+ 
+}
+
+h3 {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-weight: 400;
+  color: #cfdfff;
+  animation-name: animação;
+  animation-duration: 1s;
+ 
+}
+
+
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  animation-name: animação;
+  animation-duration: 1s;
+ 
+}
+
+
+
+
+.jogo {
+  background: rgba(0, 0, 30, 0.8);
+  border-radius: 15px;
+  width: 320px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  transition: transform 0.3s;
+}
+
+.jogo:hover {
+  transform: scale(1.03);
+}
+
+.jogo img {
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid rgb(168, 40, 40);
+}
+
+.jogo .info {
+  text-align: left;
+  margin-top: 10px;
+}
+
+
+footer {
+
+  margin: 0;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  margin-top: 50px;
+  opacity: 90%;
+  animation-name: animação;
+  animation-duration: 1s;
+ 
+ 
+}
+
+@keyframes fundo {
+  0% {background-color: #0b1d4d;}
+  50% {background-color: #030c20;}
+  100% {background-color: #0b1d4d;}
+}
+
+@keyframes animação {
+
+    from {opacity: 20%; scale: 92%; left: 0%;
+
+    }
+    to {opacity: 100%; scale: 100%; right: 20%;
+    }
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-link {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .catalogo {
+    gap: 20px;
+  }
+
+  .jogo {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logotipo {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
