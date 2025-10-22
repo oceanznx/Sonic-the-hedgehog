@@ -22,14 +22,15 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
   animation-name: animação;
   animation-duration: 1s;
+  opacity: 97%;
  
 }
 
 .logotipo {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -44,6 +45,29 @@ header {
   color: white;
   transition: 0.3s;
 }
+
+.play-now {
+margin-left: 220px;
+list-style: none;
+display: flex;
+font-size: 24px;
+font-weight: bold;
+
+}
+
+
+.play-now a {
+  text-decoration: none;
+  color: rgb(207, 211, 3);
+  transition: 0.3s;
+}
+
+.play-now a:hover {
+  color: #960500;
+
+}
+
+
 
 .nav-link a:hover {
   color: #7db7ff;
@@ -85,8 +109,6 @@ h3 {
 }
 
 
-
-
 .jogo {
   background: rgba(0, 0, 30, 0.8);
   border-radius: 15px;
@@ -98,12 +120,14 @@ h3 {
 
 .jogo:hover {
   transform: scale(1.03);
+
 }
 
 .jogo img {
   width: 100%;
   border-radius: 10px;
   border: 3px solid rgb(168, 40, 40);
+
 }
 
 .jogo .info {
@@ -114,6 +138,7 @@ h3 {
 
 footer {
 
+    text-align: center;
   margin: 0;
   padding: 15px 20px;
   font-size: 0.9rem;
@@ -126,17 +151,17 @@ footer {
 }
 
 @keyframes fundo {
-  0% {background-color: #0b1d4d;}
+  0% {background-color: #0d2566;}
   50% {background-color: #030c20;}
-  100% {background-color: #0b1d4d;}
+  100% {background-color: #0d2566;}
 }
 
 @keyframes animação {
 
-    from {opacity: 20%; scale: 92%; left: 0%;
+    from {opacity: 20%; scale: 90%; left: 0%;
 
     }
-    to {opacity: 100%; scale: 100%; right: 20%;
+    to {opacity: 100%; scale: 100%; right: 30%;
     }
 }
 
