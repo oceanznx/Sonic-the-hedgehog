@@ -29,6 +29,17 @@ header {
  
 }
 
+.introducao {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  animation-name: animação;
+  animation-duration: 2s;
+  padding: 30px;
+  margin-bottom: 60px;
+ 
+}
+
 .logotipo {
   font-size: 30px;
   font-weight: bold;
@@ -52,8 +63,10 @@ list-style: none;
 display: flex;
 font-size: 24px;
 font-weight: bold;
+padding: 10px 0; 
 
 }
+
 
 
 .play-now a {
@@ -71,41 +84,54 @@ font-weight: bold;
 
 .nav-link a:hover {
   color: #7db7ff;
+
 }
 
 
 main {
   text-align: center;
   padding: 30px 20px;
+  
+}
+
+h2 {
+  animation-name: animação;
+  animation-duration: 1s;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+
+ 
 }
 
 h1 {
+    animation-name: animação;
+  animation-duration: 1s;
   font-size: 2rem;
   margin-bottom: 10px;
-  animation-name: animação;
-  animation-duration: 1s;
+ 
  
 }
 
 h3 {
+
+ animation-name: animação;
+  animation-duration: 1s;
   max-width: 800px;
   margin: 0 auto 40px;
   font-weight: 400;
   color: #cfdfff;
-  animation-name: animação;
-  animation-duration: 1s;
  
 }
 
 
+
 .catalogo {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   justify-content: center;
   gap: 40px;
   animation-name: animação;
   animation-duration: 1s;
- 
 }
 
 
@@ -116,11 +142,13 @@ h3 {
   padding: 15px;
   box-shadow: 0 0 10px rgba(255,255,255,0.2);
   transition: transform 0.3s;
+  animation: catalogo 4s infinite;
 }
 
 .jogo:hover {
-  transform: scale(1.03);
-
+  transform: scale(1.08);
+  box-shadow: white 0 0 20px;
+  cursor: crosshair;
 }
 
 .jogo img {
@@ -156,21 +184,36 @@ footer {
   100% {background-color: #0d2566;}
 }
 
+@keyframes catalogo {
+  0% {background-color: #030c20;}
+  50% {background-color: #0d2566;}
+  100% {background-color: #030c20;}
+}
+
 @keyframes animação {
 
-    from {opacity: 20%; scale: 90%; left: 0%;
+    0% {opacity: 20%; scale: 90%; 
 
     }
-    to {opacity: 100%; scale: 100%; right: 30%;
+
+    50% {opacity: 100%; scale: 105%; 
     }
+
+    100% {opacity: 100%; scale: 100%; 
+    }
+
 }
 
 
 @media (max-width: 768px) {
-  header {
+  nav ul {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
   }
+  .play-now {
+    margin-left: 0;
+  }
+
 
   .nav-link {
     flex-wrap: wrap;
@@ -202,4 +245,8 @@ footer {
   footer {
     font-size: 0.8rem;
   }
+}
+
+audio {
+  display: none;
 }
