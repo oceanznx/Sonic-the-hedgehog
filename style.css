@@ -8,9 +8,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #0b1d4d;
+  background-color: #2e437c;
   color: white;
-  animation: fundo 4s infinite;
 }
 
 header {
@@ -23,21 +22,32 @@ header {
   top: 0;
   z-index: 10;
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  animation-name: animação;
-  animation-duration: 1s;
+  animation-name: fadein;
+  animation-duration: 1.7s;
   opacity: 97%;
  
 }
 
-.introducao {
-  max-width: 800px;
-  margin: 40px auto;
-  text-align: center;
-  animation-name: animação;
-  animation-duration: 2s;
-  padding: 30px;
-  margin-bottom: 60px;
- 
+.logo-sonic {
+  display: block;              /* remove espaçamento lateral */
+  max-width: 100%;             /* impede ultrapassar o container */
+  width: 640px;                /* tamanho base */
+  height: auto;                /* mantém proporção */
+  margin: 20px auto;           /* centraliza e dá espaçamento */
+  transition: transform 0.3s ease;
+}
+
+.logo-sonic:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.introducao {    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .logotipo {
@@ -49,6 +59,8 @@ header {
   list-style: none;
   display: flex;
   gap: 20px;
+  font-size: 18px;
+  margin-left: 60px;
 }
 
 .nav-link a {
@@ -63,8 +75,8 @@ list-style: none;
 display: flex;
 font-size: 24px;
 font-weight: bold;
-padding: 10px 0; 
-
+padding: 5px; 
+border-radius: 30px;
 }
 
 
@@ -77,7 +89,6 @@ padding: 10px 0;
 
 .play-now a:hover {
   color: #960500;
-
 }
 
 
@@ -87,20 +98,37 @@ padding: 10px 0;
 
 }
 
-
-main {
-  text-align: center;
-  padding: 30px 20px;
-  
-}
-
-h2 {
+.intro {    
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
   animation-name: animação;
   animation-duration: 1s;
-  font-size: 2.5rem;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+main {
+  animation: fundo 4s infinite;
+  padding: 50px;
+  z-index: 5;
+}
+
+h2{
+  animation-name: animação;
+  animation-duration: 1s;
+  font-size: 1.5rem;
   margin-bottom: 15px;
 
  
+}
+
+.cat {
+  animation-name: animação;
+  animation-duration: 1s;
+  font-size: 1rem;
+  margin-bottom: 40px;
 }
 
 h1 {
@@ -125,11 +153,12 @@ h3 {
 
 
 
+
 .catalogo {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
   animation-name: animação;
   animation-duration: 1s;
 }
@@ -137,8 +166,9 @@ h3 {
 
 .jogo {
   background: rgba(0, 0, 30, 0.8);
-  border-radius: 15px;
-  width: 320px;
+  border-radius: 30px;
+  width: 48%;
+  max-width: 320px;
   padding: 15px;
   box-shadow: 0 0 10px rgba(255,255,255,0.2);
   transition: transform 0.3s;
@@ -146,15 +176,18 @@ h3 {
 }
 
 .jogo:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
   box-shadow: white 0 0 20px;
-  cursor: crosshair;
+  cursor: pointer;
+
 }
 
 .jogo img {
   width: 100%;
-  border-radius: 10px;
+  height: 220px;
+  border-radius: 30px;
   border: 3px solid rgb(168, 40, 40);
+  object-fit: cover;
 
 }
 
@@ -165,16 +198,13 @@ h3 {
 
 
 footer {
-
-    text-align: center;
-  margin: 0;
-  padding: 15px 20px;
+  text-align: center;
+  padding: 10px;
   font-size: 0.9rem;
-  margin-top: 50px;
+  margin-bottom: 2px;
   opacity: 90%;
   animation-name: animação;
   animation-duration: 1s;
- 
  
 }
 
@@ -203,6 +233,12 @@ footer {
     }
 
 }
+
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 
 
 @media (max-width: 768px) {
@@ -246,6 +282,104 @@ footer {
     font-size: 0.8rem;
   }
 }
+
+@media (max-width: 900px) {
+  .logo-sonic {
+    width: 500px;
+    height: auto;
+  }
+
+  .introducao {    
+  font-size: 0.7rem;
+  margin-left: 10px;
+}
+
+}
+
+@media (max-width: 600px) {
+  .logo-sonic {
+    width: 450px;
+  }
+
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0a0a41;
+    border-top: 2px solid #1e90ff;
+    margin-top: 10px;
+    padding: 10px 0;
+    animation: fadeMenu 0.4s ease;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .nav-link {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .nav-link a {
+    font-size: 18px;
+  }
+
+  .play-now {
+    margin: 10px 0;
+    justify-content: center;
+  }
+
+  .play-now a {
+    background-color: #1e90ff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+
+  .play-now a:hover {
+    background-color: #7db7ff;
+    color: #0a0a41;
+  }
+}
+
+@keyframes fadeMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 audio {
   display: none;

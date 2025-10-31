@@ -9,12 +9,19 @@
 
 <body>
   <header>
+    <audio autoplay loop><source src="Sonic The Hedgehog OST - Green Hill Zone.mp3" type="audio/mp3"></audio>
     <span class="logotipo">SONIC ZONE</span>
-    <nav>
+
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+
+    <nav id="nav">
       <ul class="nav-link">
-        <li><a href="#">Séries</a></li>
+        <li><a href="series.html">Séries</a></li>
         <li><a href="#">Música</a></li>
-        <li><a href="#">Cultura Digital</a></li>
+        <li><a href="#">HQs</a></li>
         <li><a href="#">Filmes</a></li>
         </ul>
 
@@ -25,21 +32,22 @@
     </nav>
   </header>
 
-  <audio autoplay loop><source src="Sonic The Hedgehog OST - Green Hill Zone.mp3" type="audio/mp3"></audio>
-
-
-    
-  <main>
-
-    <section class="introducao">
-      <h2>Bem-vindo ao Sonic Zone!</h2>
+    <section class="intro">
+      <img class="logo-sonic" src="img foda.png" alt="Logo Sonic Zone">
+    <div class="introducao">
+      <h1>Bem-vindo ao Sonic Zone!</h1>
       <h3>Explore o universo do ouriço mais rápido dos videogames. Aqui você encontrará informações sobre os jogos, personagens, música e muito mais!</h3>
-    <h1>Catálogo de jogos</h1> 
-    <h3>Confira abaixo uma seleção dos principais títulos da franquia Sonic the Hedgehog, desde os clássicos até os mais recentes.</h3>
-    </section>
+    </div>
+  </section>
+<hr>
+    <main>
+
+       <div class="titulo-catalogo">
+        <h2>Catálogo de Jogos do Sonic</h2>
+        <p class="cat">Descubra os jogos mais icônicos do Sonic the Hedgehog ao longo dos anos. Desde os clássicos 2D até as aventuras em 3D, explore a evolução do ouriço azul!</p>
+      </div>
 
     <section class="catalogo">
-     
       <div class="jogo">
         <img src="sonic the hedgehog.png" alt="Sonic The Hedgehog (1991)">
         <div class="info">
@@ -47,9 +55,7 @@
           <p>🕹️ Mega Drive / Sega Genesis</p>
           <p>📅 Ano: 1991</p>
           <p>O jogo que começou tudo! Sonic corre por cenários coloridos coletando anéis e enfrentando o Dr. Robotnik.</p>
-          <p>⭐ Curiosidade: Foi criado para competir com o Mario da Nintendo e se tornou o mascote da SEGA.
-
-</p>
+          <p>⭐ Curiosidade: Foi criado para competir com o Mario da Nintendo e se tornou o mascote da SEGA.</p>
         </div>
       </div>
 
@@ -146,9 +152,19 @@
 
          </section>
    </main>      
-
+<hr>
   <footer> 
     © 2025 ocean Developer — Site Trabalho Vocação
 </footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
