@@ -28,6 +28,7 @@ header {
  
 }
 
+
 .logo-sonic {
   display: block;              /* remove espaçamento lateral */
   max-width: 100%;             /* impede ultrapassar o container */
@@ -38,7 +39,7 @@ header {
 }
 
 .logo-sonic:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   cursor: pointer;
 }
 
@@ -103,16 +104,115 @@ border-radius: 30px;
   flex-direction: column-reverse;
   flex-wrap: nowrap;
   animation-name: animação;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   align-items: center;
   margin-bottom: 20px;
 }
 
+.separador {
+  margin-bottom: 20px;
+  margin-right: 50px;
+  background-color: #2e437c;
+  padding: 15px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.search {
+  background-color: #293c70;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 15px;
+  border-radius: 30px;
+  text-align: left;
+  margin-top: 30px;
+  
+}
+
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.6em;
+  height: 1.6em;
+  border: 2px solid #1e2350; 
+  border-radius: 10px;
+  background-color: #243155; 
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 179, 255, 0.4);
+}
+
+/* Hover com brilho azul */
+input[type="checkbox"]:hover {
+  box-shadow: 0 0 15px rgba(0, 179, 255, 0.7);
+  transform: scale(1.05);
+}
+
+
+input[type="checkbox"]:checked {
+  background-color: #6178b9;
+  border-color: #434597;
+  box-shadow: 0 0 15px rgba(0, 183, 255, 0.7);
+  transform: scale(1.1);
+}
+
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: #001244;
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  left: 0.25em;
+  font-weight: bold;
+  animation: aparecer 0.2s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 📱 Responsividade */
+@media (max-width: 768px) {
+  input[type="checkbox"] {
+    width: 1.3em;
+    height: 1.3em;
+  }
+  input[type="checkbox"]:checked::after {
+    font-size: 1em;
+    left: 0.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  input[type="checkbox"] {
+    width: 1.1em;
+    height: 1.1em;
+  }
+  input[type="checkbox"]:checked::after {
+    font-size: 0.9em;
+    left: 0.15em;
+  }
+}
 
 main {
   animation: fundo 4s infinite;
   padding: 50px;
   z-index: 5;
+  display: flex;
+
 }
 
 h2{
@@ -156,23 +256,28 @@ h3 {
 
 .catalogo {
   display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: left;
   gap: 20px;
   animation-name: animação;
   animation-duration: 1s;
+  margin-left: 40px;
+  
 }
 
 
 .jogo {
   background: rgba(0, 0, 30, 0.8);
   border-radius: 30px;
-  width: 48%;
-  max-width: 320px;
-  padding: 15px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  width: 42%;
+  max-width: 300px;
+  height: auto;
+  padding: 14px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
   transition: transform 0.3s;
   animation: catalogo 4s infinite;
+  border: rgb(255, 255, 255) 2px solid;
+  
 }
 
 .jogo:hover {
@@ -222,14 +327,12 @@ footer {
 
 @keyframes animação {
 
-    0% {opacity: 20%; scale: 90%; 
+    0% {opacity: 0%; transform: scale(0.7);
 
     }
 
-    50% {opacity: 100%; scale: 105%; 
-    }
-
-    100% {opacity: 100%; scale: 100%; 
+    
+    100% {opacity: 100%; transform: scale(1.0);
     }
 
 }
@@ -366,6 +469,18 @@ footer {
   .play-now a:hover {
     background-color: #7db7ff;
     color: #0a0a41;
+  }
+}
+
+@media (max-width: 786px) {
+  .catalogo {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+  }
+
+  .separador {
+    
   }
 }
 
