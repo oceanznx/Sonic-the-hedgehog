@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 * {
@@ -30,12 +32,13 @@ header {
 
 
 .logo-sonic {
-  display: block;              /* remove espaçamento lateral */
-  max-width: 100%;             /* impede ultrapassar o container */
-  width: 640px;                /* tamanho base */
-  height: auto;                /* mantém proporção */
-  margin: 20px auto;           /* centraliza e dá espaçamento */
+  display: block;             
+  max-width: 100%;             
+  height: auto;                
+  width: 640px;               
+  margin: 20px auto;          
   transition: transform 0.3s ease;
+   animation: flutuar 2s infinite ease-in-out;
 }
 
 .logo-sonic:hover {
@@ -118,6 +121,9 @@ border-radius: 30px;
   display: flex;
   flex-direction: column;
   text-align: center;
+  flex-wrap: nowrap;
+  height: 100%;
+  animation: fadein 2.2s;
 }
 
 .search {
@@ -128,8 +134,28 @@ border-radius: 30px;
   border-radius: 30px;
   text-align: left;
   margin-top: 30px;
-  
+
 }
+
+
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #6178b9;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar {
+   width: 4px;
+  height: auto;
+  background-color: #6178b9; 
+  margin: 0 20px;
+  z-index: 0;
+}
+
 
 
 input[type="checkbox"] {
@@ -184,7 +210,7 @@ input[type="checkbox"]:checked::after {
   }
 }
 
-/* 📱 Responsividade */
+
 @media (max-width: 768px) {
   input[type="checkbox"] {
     width: 1.3em;
@@ -216,7 +242,7 @@ main {
 }
 
 h2{
-  animation-name: animação;
+  animation-name: fadein;
   animation-duration: 1s;
   font-size: 1.5rem;
   margin-bottom: 15px;
@@ -225,14 +251,14 @@ h2{
 }
 
 .cat {
-  animation-name: animação;
+  animation-name: fadein;
   animation-duration: 1s;
   font-size: 1rem;
   margin-bottom: 40px;
 }
 
 h1 {
-    animation-name: animação;
+    animation-name: fadein;
   animation-duration: 1s;
   font-size: 2rem;
   margin-bottom: 10px;
@@ -242,7 +268,7 @@ h1 {
 
 h3 {
 
- animation-name: animação;
+ animation-name: fadein;
   animation-duration: 1s;
   max-width: 800px;
   margin: 0 auto 40px;
@@ -259,8 +285,8 @@ h3 {
   flex-wrap: wrap;
   justify-content: left;
   gap: 20px;
-  animation-name: animação;
-  animation-duration: 1s;
+  animation-name: fadein;
+  animation-duration: 2.2s;
   margin-left: 40px;
   
 }
@@ -479,9 +505,13 @@ footer {
     width: 40%;
   }
 
-  .separador {
-    
-  }
+
+}
+
+@keyframes flutuar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
 
 @keyframes fadeMenu {
@@ -498,4 +528,61 @@ footer {
 
 audio {
   display: none;
+}
+
+.detalhes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+details {
+  margin-top: 25px;
+  width: 100%;
+  background-color: #253666;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  font-weight: lighter;
+}
+
+details[open] {
+  box-shadow: 0 0 7px rgba(255,255,255,0.3);
+}
+
+summary {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #253666;
+  border-radius: 20px;
+  list-style: none;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+summary:hover {
+  background-color: #3b67dd;
+  color: #08142e;
+}
+
+.dat {
+  padding: 10px 20px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+details[open] .dat {
+  max-height: 500px;
+  opacity: 1;
 }
