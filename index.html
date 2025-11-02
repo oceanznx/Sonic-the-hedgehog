@@ -50,8 +50,16 @@
 
   
 <hr>
+    <div class="search">
+<section class="search-bar">
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="🔍 Pesquise um jogo...">
+    <button id="clearBtn">✖</button>
+  </div>
+</section>
+    </div>
 
-
+    
 
   <main>
     <div class="separador">
@@ -60,14 +68,10 @@
         <p class="cat">Descubra os jogos mais icônicos do Sonic the Hedgehog ao longo dos anos. Desde os clássicos 2D até as aventuras em 3D, explore a evolução do ouriço azul!</p>
       </div>
       <hr>
-        <section class="search">
+        <section>
 
-          <div class="search-bar">
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="🔍 Pesquise um jogo...">
-    
-  </div>
-</div>
+ 
+       
 
               
                     <input type="checkbox" value="old" id="oldd" name="pergunta1">
@@ -165,13 +169,12 @@
     
     <hr class="sidebar"> 
 
-    
+   
 
 
+
+   
     <section class="catalogo">
-
-  
-
 
       <div class="jogo">
         <img src="sonic the hedgehog.png" alt="Sonic The Hedgehog (1991)">
@@ -489,25 +492,25 @@
     nav.classList.toggle('active');
   });
 
-    const searchInput = document.getElementById('searchInput');
-  const clearBtn = document.getElementById('clearBtn');
-  const jogos = document.querySelectorAll('.jogo');
+ const searchInput = document.getElementById('searchInput');
+const clearBtn = document.getElementById('clearBtn');
+const jogos = document.querySelectorAll('.jogo');
 
-  
-  searchInput.addEventListener('keyup', function() {
-    const filter = searchInput.value.toLowerCase();
-
-    jogos.forEach(jogo => {
-      const titulo = jogo.querySelector('h4').textContent.toLowerCase();
-      jogo.style.display = titulo.includes(filter) ? "block" : "none";
-    });
+searchInput.addEventListener('keyup', function () {
+  const filter = searchInput.value.toLowerCase();
+  jogos.forEach(jogo => {
+    const titulo = jogo.querySelector('h4').textContent.toLowerCase();
+    jogo.style.display = titulo.includes(filter) ? "block" : "none";
   });
+});
 
-  
-  clearBtn.addEventListener('click', function() {
-    searchInput.value = "";
-    jogos.forEach(jogo => jogo.style.display = "block");
-  });
+clearBtn.addEventListener('click', function () {
+  searchInput.value = "";
+  jogos.forEach(jogo => jogo.style.display = "block");
+});
+
+
+
 </script>
 
 </body>
