@@ -68,12 +68,9 @@
         <p class="cat">Descubra os jogos mais icônicos do Sonic the Hedgehog ao longo dos anos. Desde os clássicos 2D até as aventuras em 3D, explore a evolução do ouriço azul!</p>
       </div>
       <hr>
+      <br>
         <section>
-
- 
        
-
-              
                     <input type="checkbox" value="old" id="oldd" name="pergunta1">
                     <label for="oldd">Old Games</label><br>
                     <input type="checkbox" value="new" id="news" name="pergunta1">
@@ -484,34 +481,6 @@
     © 2025 ocean Developer — Site Trabalho Vocação
 </footer>
 
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const nav = document.getElementById('nav');
-
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-
- const searchInput = document.getElementById('searchInput');
-const clearBtn = document.getElementById('clearBtn');
-const jogos = document.querySelectorAll('.jogo');
-
-searchInput.addEventListener('keyup', function () {
-  const filter = searchInput.value.toLowerCase();
-  jogos.forEach(jogo => {
-    const titulo = jogo.querySelector('h4').textContent.toLowerCase();
-    jogo.style.display = titulo.includes(filter) ? "block" : "none";
-  });
-});
-
-clearBtn.addEventListener('click', function () {
-  searchInput.value = "";
-  jogos.forEach(jogo => jogo.style.display = "block");
-});
-
-
-
-</script>
-
+ <script src="script.js"></script>
 </body>
 </html>

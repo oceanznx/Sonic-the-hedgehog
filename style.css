@@ -1,7 +1,8 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* ==============================
+   RESET & BASE
+============================== */
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,15 @@ body {
   color: white;
 }
 
+hr {
+  border: none;
+  height: 2px;
+  background-color: #6178b9;
+}
+
+/* ==============================
+   HEADER
+============================== */
 header {
   background: #0a0a41;
   display: flex;
@@ -24,21 +34,18 @@ header {
   top: 0;
   z-index: 50;
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  animation-name: fadein;
-  animation-duration: 1.7s;
-  opacity: 97%;
- 
+  animation: fadein 1.7s;
+  opacity: 0.97;
 }
 
-
 .logo-sonic {
-  display: block;             
-  max-width: 100%;             
-  height: auto;                
-  width: 640px;               
-  margin: 20px auto;          
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 640px;
+  margin: 20px auto;
   transition: transform 0.3s ease;
-   animation: flutuar 2s infinite ease-in-out;
+  animation: flutuar 2s infinite ease-in-out;
 }
 
 .logo-sonic:hover {
@@ -46,25 +53,11 @@ header {
   cursor: pointer;
 }
 
-.introducao {    
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.logotipo {
-  font-size: 30px;
-  font-weight: bold;
-}
-
 .nav-link {
   list-style: none;
   display: flex;
   gap: 20px;
   font-size: 18px;
-  margin-left: 60px;
 }
 
 .nav-link a {
@@ -73,17 +66,18 @@ header {
   transition: 0.3s;
 }
 
-.play-now {
-margin-left: 220px;
-list-style: none;
-display: flex;
-font-size: 24px;
-font-weight: bold;
-padding: 5px; 
-border-radius: 30px;
+.nav-link a:hover {
+  color: #7db7ff;
 }
 
-
+.play-now {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 30px;
+  list-style: none;
+}
 
 .play-now a {
   text-decoration: none;
@@ -95,353 +89,6 @@ border-radius: 30px;
   color: #960500;
 }
 
-
-
-.nav-link a:hover {
-  color: #7db7ff;
-
-}
-
-.intro {    
-  display: flex;
-  flex-direction: column-reverse;
-  flex-wrap: nowrap;
-  animation-name: animação;
-  animation-duration: 1.5s;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.separador {
-  margin-bottom: 20px;
-  margin-right: 50px;
-  background-color: #2e437c;
-  padding: 15px;
-  border-radius: 30px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  flex-wrap: nowrap;
-  height: 100%;
-  animation: fadein 2.2s;
-  position: sticky;
-  top: 29px;
-   scale: calc(0.87);
-   max-width: 30%;
- 
-}
-
-
-
-
-
-.div-header{
-  position: sticky;
-  top: 102px;
-}
-
-hr {
-  border: none;
-  height: 2px;
-  background-color: #6178b9;
-  z-index: 10;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar {
-   width: 4px;
-  height: auto;
-  background-color: #6178b9; 
-  margin: 0 20px;
-  z-index: 0;
-}
-
-
-
-input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 1.6em;
-  height: 1.6em;
-  border: 2px solid #1e2350; 
-  border-radius: 10px;
-  background-color: #243155; 
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 8px rgba(0, 179, 255, 0.4);
-}
-
-
-input[type="checkbox"]:hover {
-  box-shadow: 0 0 15px rgba(0, 179, 255, 0.7);
-  transform: scale(1.05);
-}
-
-
-input[type="checkbox"]:checked {
-  background-color: #6178b9;
-  border-color: #434597;
-  box-shadow: 0 0 15px rgba(0, 183, 255, 0.7);
-  transform: scale(1.1);
-}
-
-
-input[type="checkbox"]:checked::after {
-  content: "✓";
-  color: #001244;
-  font-size: 1em;
-  position: absolute;
-  top: 0;
-  left: 0.25em;
-  font-weight: bold;
-  animation: aparecer 0.2s ease;
-}
-
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-
-@media (max-width: 768px) {
-  input[type="checkbox"] {
-    width: 1.3em;
-    height: 1.3em;
-  }
-  input[type="checkbox"]:checked::after {
-    font-size: 1em;
-    left: 0.2em;
-  }
-}
-
-@media (max-width: 480px) {
-  input[type="checkbox"] {
-    width: 1.1em;
-    height: 1.1em;
-  }
-  input[type="checkbox"]:checked::after {
-    font-size: 0.9em;
-    left: 0.15em;
-  }
-}
-
-main {
-  animation: fundo 4s infinite;
-  padding: 20px;
-  z-index: 5;
-  display: flex;
- 
-
-
-}
-
-h2{
-  animation-name: fadein;
-  animation-duration: 1s;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-
- 
-}
-
-.cat {
-  animation-name: fadein;
-  animation-duration: 1s;
-  font-size: 1rem;
-  margin-bottom: 40px;
-}
-
-h1 {
-    animation-name: fadein;
-  animation-duration: 1s;
-  font-size: 2rem;
-  margin-bottom: 10px;
- 
- 
-}
-
-h3 {
-
- animation-name: fadein;
-  animation-duration: 1s;
-  max-width: 800px;
-  margin: 0 auto 40px;
-  font-weight: 400;
-  color: #cfdfff;
- 
-}
-
-
-
-
-.catalogo {
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  animation-name: fadein;
-  animation-duration: 2.2s;
-  margin-left: 40px;
-  min-height: 10px;
-  
-}
-
-
-
-.jogo {
-  background: rgba(0, 0, 30, 0.8);
-  border-radius: 30px;
-  max-width: 300px;
-  height: auto;
-  padding: 10px;
-  box-shadow: 0 0 15px rgba(255,255,255,0.2);
-  transition: transform 0.3s;
-  animation: catalogo 4s infinite;
-  border: rgb(100, 122, 192) 2px solid;
-  scale: calc(0.94);
-  max-height: 58%;
- 
-  
-}
-
-.jogo:hover {
-  transform: scale(1.05);
-  box-shadow: white 0 0 20px;
-  cursor: pointer;
-
-}
-
-.jogo img {
-  width: 100%;
-  height: 220px;
-  border-radius: 30px;
-  border: 3px solid rgb(168, 40, 40);
-  object-fit: cover;
-
-}
-
-.jogo .info {
-  text-align: left;
-  margin-top: 10px;
-}
-
-
-footer {
-  text-align: center;
-  padding: 10px;
-  font-size: 0.9rem;
-  margin-bottom: 2px;
-  opacity: 90%;
-  animation-name: animação;
-  animation-duration: 1s;
- 
-}
-
-@keyframes fundo {
-  0% {background-color: #0d2566;}
-  50% {background-color: #030c20;}
-  100% {background-color: #0d2566;}
-}
-
-@keyframes catalogo {
-  0% {background-color: #030c20;}
-  50% {background-color: #0d2566;}
-  100% {background-color: #030c20;}
-}
-
-@keyframes animação {
-
-    0% {opacity: 0%; transform: scale(0.7);
-
-    }
-
-    
-    100% {opacity: 100%; transform: scale(1.0);
-    }
-
-}
-
-@keyframes fadein {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  .play-now {
-    margin-left: 0;
-  }
-
-
-  .nav-link {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  
-  .jogo {
-    width: 90%;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .logotipo {
-    font-size: 20px;
-  }
-
-  h3 {
-    font-size: 0.9rem;
-  }
-
-  footer {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .logo-sonic {
-    width: 500px;
-    height: auto;
-  }
-
-  .introducao {    
-  font-size: 0.7rem;
-  margin-left: 10px;
-}
-
-.jogo {
-  max-width: 100%;
-  width: 225px;
-}
-
-}
-
-@media (max-width: 600px) {
-  .logo-sonic {
-    width: 450px;
-  }
-
-}
-
-
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -450,134 +97,186 @@ footer {
   user-select: none;
 }
 
-
-@media (max-width: 1024px) {
-  header {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #0a0a41;
-    border-top: 2px solid #1e90ff;
-    margin-top: 10px;
-    padding: 10px 0;
-    animation: fadeMenu 0.4s ease;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  .nav-link {
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .nav-link a {
-    font-size: 18px;
-  }
-
-  .play-now {
-    margin: 10px 0;
-    justify-content: center;
-  }
-
-  .play-now a {
-    background-color: #1e90ff;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 10px;
-    font-weight: bold;
-  }
-
-  .play-now a:hover {
-    background-color: #7db7ff;
-    color: #0a0a41;
-  }
+/* ==============================
+   INTRODUÇÃO
+============================== */
+.introducao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
-@media (max-width: 786px) {
-  .catalogo {
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 7px; 
-    justify-items: center; 
-    width: 100%; 
-    margin: 7px;
-  }
+.intro {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  animation: animacao 1.5s;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
-  section {
-    margin: 0px;
-    padding: 0px;
-    
+.logotipo {
+  font-size: 30px;
+  font-weight: bold;
+}
 
-  }
+/* ==============================
+   MAIN
+============================== */
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  animation: fundo 4s infinite;
+}
 
-  }
+/* ==============================
+   SEPARADOR (BARRA LATERAL)
+============================== */
+.separador {
+  background-color: #2e437c;
+  padding: 15px;
+  border-radius: 30px;
+  flex: 0 0 200px; /* largura fixa */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  animation: fadein 2.2s;
+  order: 0;
+  max-height: fit-content;
+ position: sticky;
+   top: 105px;
+}
 
-  @media (max-width: 1024px) {
-     
+/* ==============================
+   CATALOGO DE JOGOS
+============================== */
+.catalogo {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  scale: calc(0.95);
+  gap: 5px;
+ 
+}
 
-  .jogo {
-    max-width: 100%; 
-    width: 250px; 
-  }
-
-  .catalogo {
-    display: flex;
-    justify-content: center;
-    
-  }
-
+.jogo {
+  background: rgba(0, 0, 30, 0.8);
+  border-radius: 30px;
+  max-width: 300px;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  transition: transform 0.3s;
+  border: 2px solid rgb(100, 122, 192);
   
-   }
-
-
-@media (max-width: 480px) {
-  .catalogo {
-    grid-template-columns: 1fr; 
-  }
-
-  .jogo {
-    max-width: 100%;
-  }
 }
 
-
-
-@keyframes flutuar {
-  0% { transform: translateY(0);}
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0);  }
+.jogo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(171, 224, 248, 0.5);
+  cursor: pointer;
 }
 
-@keyframes fadeMenu {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.jogo img {
+  width: 100%;
+  height: 220px;
+  border-radius: 30px;
+  border: 3px solid rgb(168, 40, 40);
+  object-fit: cover;
 }
 
-
-audio {
-  display: none;
+.jogo .info {
+  text-align: left;
+  margin-top: 10px;
 }
 
+.jogo .info h4 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.jogo .info p {
+  font-size: 0.9rem;
+  color: #dbdada;
+}
+
+/* ==============================
+   SEARCH BAR
+============================== */
+.search {
+  padding: 10px;
+  background-color: #0091d4;
+  animation: fundo 4s infinite;
+}
+
+.search-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  animation: fadein 2.2s;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+  border-radius: 30px;
+  border: 2px solid #6178b9;
+  background-color: #1a2a5b;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+  box-shadow: 0 0 10px #3b67dd;
+}
+
+#clearBtn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #cfdfff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+#clearBtn:hover {
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+  opacity: 0.9;
+  animation: animacao 1s;
+}
+
+/* ==============================
+   DETALHES EXPANDIVEIS
+============================== */
 .detalhes {
   display: flex;
   flex-direction: column;
@@ -635,225 +334,112 @@ details[open] .dat {
   opacity: 1;
 }
 
-section {
-  scale: calc(0.95);
-}
-
-@media (max-width: 1024px) {
-  .separador, .sidebar, .div-header{
-    display: none;
-
-  }
-} 
-
-@media (max-width: 1024px) {
-    section {
-      scale: calc(1);
-    }
-
-    main {
-      padding: 20px 0 0;
-      margin-right: 0px;
-    }
-
-  }
-
-.jogo:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(171, 224, 248, 0.5);
-}
-
-.jogo .info h4 {
-  font-size: 1.1rem;
-  margin: 10px 0;
-}
-
-.jogo .info p {
-  font-size: 0.9rem;
-  color: #dbdada;
-}
-
-@media (max-width: 865px) {
-  .catalogo {
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    padding: 20px 0px 0px;
-    row-gap: 10px;
-    margin-bottom: 20px;
-    gap: 7px;
-   
-    
-  }
-
-
-
-  .jogo {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
-    width: 10%;
-   
-    
-  }
-
-  .search-bar {
-    max-width: 20%;
-  }
-}
-
-@media (max-width: 1280px) {
- .catalogo {
-  margin-bottom: 20px;
-  
- }
-
- .jogo {
-  max-width: 100%;
-  width: 260px;
-
- }
-
-  .separador, .sidebar {
-    display: none;
-  }
-
-}
-
-
-.search {
-  padding: 10px;
-  background-color: #0091d4;
-  animation: fundo 4s infinite;
-  
-  
-
-}
-
-
-.search-bar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-  
-}
-
-.search-container {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-}
-
-#searchInput {
-  width: 100%;
-  padding: 12px 45px 12px 15px;
-  border-radius: 30px;
-  border: 2px solid #6178b9;
-  background-color: #1a2a5b;
-  color: white;
-  font-size: 1rem;
-  outline: none;
-  transition: all 0.3s ease;
-}
-
-#searchInput:focus {
-  box-shadow: 0 0 10px #3b67dd;
-}
-
-#clearBtn {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  color: #cfdfff;
+/* ==============================
+   INPUT CHECKBOX CUSTOM
+============================== */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.6em;
+  height: 1.6em;
+  border: 2px solid #1e2350;
+  border-radius: 10px;
+  background-color: #243155;
   cursor: pointer;
-  font-size: 1.2rem;
-  transition: 0.3s;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 179, 255, 0.4);
 }
 
-#clearBtn:hover {
-  color: #fff;
-  transform: translateY(-50%) scale(1.1);
+input[type="checkbox"]:hover {
+  box-shadow: 0 0 15px rgba(0, 179, 255, 0.7);
+  transform: scale(1.05);
 }
 
-/* 📱 Responsivo */
-@media (max-width: 768px) {
-  .search-container {
-    max-width: 90%;
-  }
-
-  #searchInput {
-    font-size: 0.9rem;
-    padding: 10px 40px 10px 12px;
-  }
-
-  #clearBtn {
-    font-size: 1rem;
-  }
+input[type="checkbox"]:checked {
+  background-color: #6178b9;
+  border-color: #434597;
+  box-shadow: 0 0 15px rgba(0, 183, 255, 0.7);
+  transform: scale(1.1);
 }
 
-
-@media (max-width: 1180px) {
-    
-  .jogo {
-    max-width: 80%;
-    width: 260px;
-  }
-
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: #001244;
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  left: 0.25em;
+  font-weight: bold;
+  animation: aparecer 0.2s ease;
 }
 
+/* ==============================
+   KEYFRAMES
+============================== */
+@keyframes flutuar {
+  0% { transform: translateY(0);}
+  50% { transform: translateY(-15px);}
+  100% { transform: translateY(0);}
+}
 
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fundo {
+  0% {background-color: #0d2566;}
+  50% {background-color: #030c20;}
+  100% {background-color: #0d2566;}
+}
+
+@keyframes animacao {
+  0% {opacity: 0; transform: scale(0.7);}
+  100% {opacity: 1; transform: scale(1);}
+}
+
+@keyframes aparecer {
+  from {opacity: 0; transform: scale(0.3);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+@keyframes fadeMenu {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+@media (max-width: 1024px) {
+  header { flex-wrap: wrap; justify-content: space-between; }
+  .menu-toggle { display: block; }
+  nav { width: 100%; display: none; flex-direction: column; align-items: center; background-color: #0a0a41; border-top: 2px solid #1e90ff; margin-top: 10px; padding: 10px 0; animation: fadeMenu 0.4s ease; }
+  nav.active { display: flex; }
+  .nav-link { flex-direction: column; gap: 10px; margin: 10px 0; text-align: center; }
+  .play-now { margin: 10px 0; justify-content: center; }
+  .play-now a { background-color: #1e90ff; color: white; padding: 8px 16px; border-radius: 10px; font-weight: bold; }
+  .play-now a:hover { background-color: #7db7ff; color: #0a0a41; }
+  .separador { width: 100%; flex: none; margin-bottom: 15px; }
+  main { flex-direction: column; }
+  .catalogo { justify-content: center; }
+}
 
 @media (max-width: 800px) {
-  
-   .catalogo {
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
-    padding: 20px 0px 0px;
-    row-gap: 10px;
-   
-    gap: 7px;
-    scale: calc(0.87);
-    
-  }
-
-  .jogo {
-
-    max-width: 100%;
-    width: 800px;
-    max-height: 100%;
-    
-
-  }
-
-
-
+  .catalogo { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px; padding: 20px 0 0; }
+  .jogo { width: 100%; max-width: 100%; }
 }
 
-@media (max-width: 1600px) {
- .catalogo {
-  margin-bottom: 20px;
-  
- }
-
- .jogo {
-  max-width: 100%;
-  width: 260px;
-
- }
-
+@media (max-width: 480px) {
+  .catalogo { grid-template-columns: 1fr; display: grid; }
+  .jogo { width: 100%; }
+  .logotipo { font-size: 20px; }
 }
 
-@media (min-width:1024px) {
-
-  .mob-search {
-    display: none;
-    
-    
-  }
-
+@media (max-width: 768px) {
+  .search-container { max-width: 90%; }
+  #searchInput { font-size: 0.9rem; padding: 10px 40px 10px 12px; }
+  #clearBtn { font-size: 1rem; }
 }
