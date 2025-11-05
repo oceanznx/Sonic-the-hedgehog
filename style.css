@@ -159,9 +159,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  scale: calc(0.95);
   gap: 5px;
- 
+  
 }
 
 .jogo {
@@ -172,8 +171,8 @@ main {
   padding: 10px;
   box-shadow: 0 0 15px rgba(255,255,255,0.2);
   transition: transform 0.3s;
-  border: 2px solid rgb(100, 122, 192);
-  
+  border: 2px solid rgb(100, 122, 192); 
+  max-height: 40%;
 }
 
 .jogo:hover {
@@ -422,19 +421,19 @@ input[type="checkbox"]:checked::after {
   .play-now { margin: 10px 0; justify-content: center; }
   .play-now a { background-color: #1e90ff; color: white; padding: 8px 16px; border-radius: 10px; font-weight: bold; }
   .play-now a:hover { background-color: #7db7ff; color: #0a0a41; }
-  .separador { width: 100%; flex: none; margin-bottom: 15px; }
+  .separador { width: 100%; flex: none; margin-bottom: 15px; display: none;}
   main { flex-direction: column; }
   .catalogo { justify-content: center; }
 }
 
 @media (max-width: 800px) {
   .catalogo { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px; padding: 20px 0 0; }
-  .jogo { width: 100%; max-width: 100%; }
+  .jogo { width: 100%; max-width: 100%; max-height: 100%; }
 }
 
 @media (max-width: 480px) {
   .catalogo { grid-template-columns: 1fr; display: grid; }
-  .jogo { width: 100%; }
+  .jogo { width: 100%;}
   .logotipo { font-size: 20px; }
 }
 
