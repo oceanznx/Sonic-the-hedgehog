@@ -29,3 +29,4 @@ clearBtn.addEventListener('click', () => {
   searchInput.value = '';
   jogos.forEach(jogo => jogo.style.display = '');
 });
+

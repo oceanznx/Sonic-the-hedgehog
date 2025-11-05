@@ -29,7 +29,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 15px;
   position: sticky;
   top: 0;
   z-index: 50;
@@ -58,6 +58,7 @@ header {
   display: flex;
   gap: 20px;
   font-size: 18px;
+  
 }
 
 .nav-link a {
@@ -72,9 +73,10 @@ header {
 
 .play-now {
   display: flex;
-  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
   font-weight: bold;
-  padding: 5px;
   border-radius: 30px;
   list-style: none;
 }
@@ -139,7 +141,7 @@ main {
 .separador {
   background-color: #2e437c;
   padding: 15px;
-  border-radius: 30px;
+  border-radius: 12px;
   flex: 0 0 200px; /* largura fixa */
   display: flex;
   flex-direction: column;
@@ -148,8 +150,9 @@ main {
   order: 0;
   max-height: fit-content;
  position: sticky;
-   top: 105px;
+   top: 90px;
 }
+
 
 /* ==============================
    CATALOGO DE JOGOS
@@ -165,10 +168,10 @@ main {
 
 .jogo {
   background: rgba(0, 0, 30, 0.8);
-  border-radius: 30px;
+  border-radius: 15px;
   max-width: 300px;
   width: 100%;
-  padding: 10px;
+  padding: 14px;
   box-shadow: 0 0 15px rgba(255,255,255,0.2);
   transition: transform 0.3s;
   border: 2px solid rgb(100, 122, 192); 
@@ -184,9 +187,10 @@ main {
 .jogo img {
   width: 100%;
   height: 220px;
-  border-radius: 30px;
+  border-radius: 15px;
   border: 3px solid rgb(168, 40, 40);
   object-fit: cover;
+  
 }
 
 .jogo .info {
@@ -394,6 +398,7 @@ input[type="checkbox"]:checked::after {
   100% {background-color: #0d2566;}
 }
 
+
 @keyframes animacao {
   0% {opacity: 0; transform: scale(0.7);}
   100% {opacity: 1; transform: scale(1);}
@@ -429,6 +434,7 @@ input[type="checkbox"]:checked::after {
 @media (max-width: 800px) {
   .catalogo { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px; padding: 20px 0 0; }
   .jogo { width: 100%; max-width: 100%; max-height: 100%; }
+  .intro {padding: 15px; text-align: center;}
 }
 
 @media (max-width: 480px) {
