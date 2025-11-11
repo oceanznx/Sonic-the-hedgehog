@@ -1,0 +1,57 @@
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #0b1530 0%, #101a3a 100%);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  background-image: url(green\ hill\ zone.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+header {
+  background: #081235;
+  animation: fadeMenu 1s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+.logotipo { font-weight: 700; font-size: 22px; letter-spacing: 1px; }
+.voltar { color: #bcd9ff; text-decoration: none; background: transparent; padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); }
+.voltar:hover { background: rgba(0, 102, 255, 0.356); color: #ffffff; }
+main.detalhe-jogo {display: flex; gap: 24px; max-width: 1400px; margin: 120px auto; align-items: flex-start; padding: 50px; background-color: #022642e0; border-radius: 20px;}
+main.detalhe-jogo img { width: 580px; height: 420px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(146, 146, 146, 0.199); border: 4px solid rgb(0, 119, 255); }
+.info-detalhe { max-width: 640px; }
+.info-detalhe h1 { margin: 0 0 20px 0; font-size: 2rem; }
+.info-detalhe p { line-height: 1.5; color: #dfe9ff; }
+.requisitos { background: rgba(1, 62, 102, 0.568); padding: 12px; border-radius: 10px; margin: 12px 0; }
+.btn-trailer, .btn-download { display: inline-block; text-decoration: none; padding: 10px 14px; border-radius: 10px; margin-right: 10px; border: none; cursor: pointer; font-weight: 600; }
+.btn-trailer { background: linear-gradient(90deg,#1f6fff,#4fb3ff); color: white; }
+.btn-download { background: linear-gradient(90deg,#00c853,#66ffa6); color: #062018; }
+.btn-trailer:hover { filter: brightness(1.20); }
+.btn-download:hover { filter: brightness(1.20);}
+@media (max-width: 900px) {
+  main.detalhe-jogo { flex-direction: column; align-items: center;}
+  main.detalhe-jogo img { width: 90%; height: auto; }
+  .info-detalhe { width: 90%; }
+}
+
+main{
+  animation: fadeMenu 1s;
+  margin-bottom: 100px;
+}
+
+@keyframes fluides {
+   0% {opacity: 0; transform: scale(0.7);}
+  100% {opacity: 1; transform: scale(1);}
+}
+
+@keyframes fadeMenu {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
