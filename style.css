@@ -1,482 +1,333 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* ==============================
-   RESET & BASE
-============================== */
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Stack+Sans+Headline:wght@200..700&family=Uncial+Antiqua&display=swap');
+
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #2e437c;
-  color: white;
+    font-family: poppins, sans-serif;
+   background: linear-gradient(
+  to right,
+  #000000,5%,
+  #020202 25%,
+  #05050b 50%,
+  #020202 75%
+);
+    color: #ffffff;
+}
+
+/* Cabeçalho */
+
+header {
+    padding: 40px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 80px;
+  
+    
+}
+
+nav ul li a {
+    color: #ffffff94;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: ''; 
+    position: absolute;
+    width: 0; 
+    height: 1.5px;
+    display: block;
+    left: 0; 
+    bottom: -5px; 
+    background: linear-gradient(to right, #6bbfe6, #aec7ec, #ffffff);
+    transition: width 0.3s ease; 
+}
+
+nav ul li a:hover::after {
+    width: 100%; 
+}
+
+nav a:hover {
+    color: #7fbcd9;
+}
+
+.icones {
+   
+    display: flex;
+    gap: 15px;
+}
+
+.zap-icone, .git-icone, .linkedin-icone {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.zap-icone:hover, .git-icone:hover, .linkedin-icone:hover {
+    transform: scale(1.1);
+    
+}
+
+/* Conteudo */
+
+main {
+    padding: 10px 4%;
+    align-items: flex-start;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+.foto-perfil {
+    border: 1px solid #3a81a2;
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 6px rgba(58, 129, 162, 0.7);
+}
+
+.inicio h2, .habilidades h2, .sobre h2, .projetos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.inicio p, .habilidades p, .sobre p, .projetos p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #d0d0d0;
+}
+
+span {
+    color: #3a81a2;
+    text-shadow: 0 0 2px #3a81a2;
+}
+
+.inicio  {
+    padding: 0 10rem;
+    margin-top: 16rem;
+    display: flex;
+    gap: 4rem;
+}
+
+.eu {
+    margin-left: 5rem;
+    justify-content: center;
+    align-items: center;
+    max-width: calc(100vh - 10%);
 }
 
 hr {
-  border: none;
-  height: 2px;
-  background-color: #6178b9;
+    border: none;
+    width: 3px;
+    background: linear-gradient(
+        to right, 
+        #00000000, 
+        #3a81a2,     
+        #ffffff,     
+        #3a81a2,    
+        #00000000  
+    );
+    height: 300px;
+    
 }
-
-/* ==============================
-   HEADER
-============================== */
-header {
-  background: #0a0a41;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  animation: fadein 1.7s;
-  opacity: 0.97;
-}
-
-.logo-sonic {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  width: 640px;
-  margin: 20px auto;
-  transition: transform 0.3s ease;
-  animation: flutuar 3s infinite ease-in-out;
-}
-
-h3 {
-  font-weight: lighter;
-  font-size: medium;
-  opacity: 80%;
-}
-
-.logo-sonic:hover {
-  transform: scale(1.5);
-  cursor: pointer;
+.sub{
+    color: #ffffff;
+    margin-bottom: 20px;
+    width: 38rem;
 }
 
 
-.jogo > a.games,
-.jogo > a.games:link,
-.jogo > a.games:visited,
-.jogo > a.games:hover,
-.jogo > a.games:active {
-  display: block;      
-  color: inherit;     
-  text-decoration: none; 
+.habilidades {
+    text-align: center;
+    padding: 0 10rem;
+    margin-top: 20rem;
+    letter-spacing: 0.2rem;
+     z-index: 999;
+}
+/* habilidades */
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    margin-top: 6rem;
+}
+
+.html-logo, .css-logo, .js-logo {
+    width: 80px;
+    height: 80px;
+}
+
+.html, .css, .js {
+ text-align: left;
+ width: 400px;
+ transition: transform 0.4s ease, box-shadow 0.4s ease;
+ padding: 40px;
+ border-radius: 20px;
+}
+
+.html h3, .css h3, .js h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.html p, .css p, .js p {
+    color: #d0d0d0;
+    line-height: 1.4;
+    font-size: small;
+}
+
+.html:hover, .css:hover, .js:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 10px #d0d0d0;
+    cursor: pointer;
+}
+
+.foto-sobre {
+    width: 400px;
+    height: 600px;
+    border-radius: 30px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+    border: 1px solid #3a81a2;
+}
+.sobre {
+    padding: 0 10rem;
+    margin-top: 20rem;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.contato {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Projetos */
+
+section.projetos {
+    padding: 80px 4%;
+    text-align: center;
+    margin-top: 12rem;
+    
 }
 
 
-.jogo > a.games h4,
-.jogo > a.games p,
-.jogo > a.games .info {
-  color: inherit;
-  text-decoration: none;
+
+section.projetos .flex {
+    display: flex;
+    justify-content: space-between;
 }
 
-
-
-
-.nav-link {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  font-size: 18px;
-  
+.img-port {
+    margin-top: 60px;
+    width: 360px;
+    height: 460px;
+   background-size: cover;
+   background-position: 100% 0%;
+   transition: background-position 5s ease, transform 0.3s ease;
+   border-radius: 30px;
+   cursor: pointer;
+   position: relative;
+   border: 1px solid #3a81a2;
 }
 
-.nav-link a {
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
+.img-port:hover {
+     background-position: 100% 100%;
+     transform: scale(1.05);
 }
 
-.nav-link a:hover {
-  color: #7db7ff;
+.escuro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-.play-now {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 30px;
-  list-style: none;
+.img-port:hover .escuro {
+    opacity: 1;
 }
 
-.play-now a {
-  text-decoration: none;
-  color: rgb(207, 211, 3);
-  transition: 0.3s;
-}
-
-.play-now a:hover {
-  color: #960500;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-}
-
-/* ==============================
-   INTRODUÇÃO
-============================== */
-.introducao {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.intro {
-  display: flex;
-  flex-direction: column-reverse;
-  flex-wrap: nowrap;
-  animation: animacao 1.5s;
-  align-items: center; 
-}
-
-.logotipo {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-/* ==============================
-   MAIN
-============================== */
-main {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  flex-wrap: wrap;
-  animation: fundo 4s infinite;
-}
-
-/* ==============================
-   SEPARADOR (BARRA LATERAL)
-============================== */
-.separador {
-  background-color: #2e437c;
-  padding: 15px;
-  border-radius: 12px;
-  flex: 0 0 200px; /* largura fixa */
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  animation: fadein 2.2s;
-  order: 0;
-  max-height: fit-content;
- position: sticky;
-   top: 90px;
-}
-
-
-/* ==============================
-   CATALOGO DE JOGOS
-============================== */
-.catalogo {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 5px;
-  scale: calc(0.98);
-}
-
-.jogo {
-  background: rgba(0, 0, 30, 0.8);
-  border-radius: 15px;
-  max-width: 300px;
-  width: 80%;
-  padding: 8px;
-  box-shadow: 0 0 15px rgba(255,255,255,0.2);
-  transition: transform 0.3s;
-  border: 2px solid rgb(100, 122, 192); 
-  max-height: 40%;
-  animation: fadein 2s;
-}
-
-.jogo:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(171, 224, 248, 0.5);
-  cursor: pointer;
-}
-
-.jogo img {
-  width: 100%;
-  height: 220px;
-  border-radius: 8px;
-  border: 3px solid rgb(255, 0, 0);
-  object-fit: cover;
-  
-}
-
-.jogo > a.games:hover h4 { color: #7db7ff; } /* só muda o título ao passar o mouse */
-
-
-.jogo .info {
-  text-align: left;
-  margin-top: 10px;
-}
-
-.jogo .info h4 {
-  font-size: 1.1rem;
-  margin: 10px 0;
-}
-
-.jogo .info p {
-  font-size: 0.9rem;
-  color: #dbdada;
-}
-
-/* ==============================
-   SEARCH BAR
-============================== */
-.search {
-  padding: 10px;
-  background-color: #0091d4;
-  animation: fundo 4s infinite;
-}
-
-.search-bar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-  animation: fadein 2s;
-}
-
-.search-container {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-}
-
-#searchInput {
-  width: 100%;
-  padding: 12px 45px 12px 15px;
-  border-radius: 30px;
-  border: 2px solid #6178b9;
-  background-color: #1a2a5b;
-  color: white;
-  font-size: 1rem;
-  outline: none;
-  transition: all 0.3s ease;
-}
-
-#searchInput:focus {
-  box-shadow: 0 0 10px #3b67dd;
-}
-
-#clearBtn {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  color: #cfdfff;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: 0.3s;
-}
-
-#clearBtn:hover {
-  color: #fff;
-  transform: translateY(-50%) scale(1.1);
-}
-
-/* ==============================
-   FOOTER
-============================== */
 footer {
-  text-align: center;
-  padding: 10px;
-  font-size: 0.9rem;
-  margin-bottom: 2px;
-  opacity: 0.9;
-  animation: animacao 1s;
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px  #ffffff14;
 }
 
-/* ==============================
-   DETALHES EXPANDIVEIS
-============================== */
-.detalhes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1px;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+footer .flex {
+    display: flex;
+    justify-content: space-between;
 }
 
-details {
-  margin-top: 25px;
-  width: 100%;
-  background-color: #253666;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  font-weight: lighter;
+.div-footer {
+    border: none;
+    height: 3px;
+    width: 100%;
+    background: #3a81a2;
+    margin: 20px 0;
 }
 
-details[open] {
-  box-shadow: 0 0 7px rgba(255,255,255,0.3);
+footer .linha-rodape p a {
+    color: #d0d0d0;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-summary {
-  cursor: pointer;
-  padding: 10px 20px;
-  background-color: #253666;
-  border-radius: 20px;
-  list-style: none;
-  font-weight: bold;
-  transition: 0.3s;
-  font-size: 18px;
+footer .linha-rodape p a:hover {
+    color: #3a81a2;
+    text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
-summary:hover {
-  background-color: #3b67dd;
-  color: #08142e;
-}
-
-.dat {
-  padding: 10px 20px;
-  font-size: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
-}
-
-details[open] .dat {
-  max-height: 500px;
-  opacity: 1;
-}
-
-/* ==============================
-   INPUT CHECKBOX CUSTOM
-============================== */
-input[type="checkbox"] {
-  margin-bottom: -5px ;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 1.6em;
-  height: 1.6em;
-  border: 2px solid #1e2350;
-  border-radius: 6px;
-  background-color: #243155;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 8px rgba(0, 179, 255, 0.4);
-}
-
-input[type="checkbox"]:hover {
-  box-shadow: 0 0 15px rgba(0, 179, 255, 0.7);
-  transform: scale(1.05);
-}
-
-input[type="checkbox"]:checked {
-  background-color: #6178b9;
-  border-color: #434597;
-  box-shadow: 0 0 15px rgba(0, 183, 255, 0.7);
-  transform: scale(1.1);
-}
-
-input[type="checkbox"]:checked::after {
-  content: "✓";
-  color: #001244;
-  font-size: 1em;
-  position: absolute;
-  top: 0;
-  left: 0.25em;
-  font-weight: bold;
-  animation: aparecer 0.2s ease;
-}
-
-/* ==============================
-   KEYFRAMES
-============================== */
-@keyframes flutuar {
-  0% { transform: translateY(0);}
-  50% { transform: translateY(-15px);}
-  100% { transform: translateY(0);}
-}
-
-@keyframes fadein {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fundo {
-  0% {background-color: #0d2566;}
-  50% {background-color: #030c20;}
-  100% {background-color: #0d2566;}
-}
-
-
-@keyframes animacao {
-  0% {opacity: 0; transform: scale(0.7);}
-  100% {opacity: 1; transform: scale(1);}
-}
-
-@keyframes aparecer {
-  from {opacity: 0; transform: scale(0.3);}
-  to {opacity: 1; transform: scale(1);}
-}
-
-@keyframes fadeMenu {
-  from {opacity: 0; transform: translateY(-10px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-/* ==============================
-   RESPONSIVIDADE
-============================== */
-@media (max-width: 1024px) {
-  header { flex-wrap: wrap; justify-content: space-between; }
-  .menu-toggle { display: block; }
-  nav { width: 100%; display: none; flex-direction: column; align-items: center; background-color: #0a0a41; border-top: 2px solid #1e90ff; margin-top: 10px; padding: 10px 0; animation: fadeMenu 0.4s ease; }
-  nav.active { display: flex; }
-  .nav-link { flex-direction: column; gap: 10px; margin: 10px 0; text-align: center; }
-  .play-now { margin: 10px 0; justify-content: center; }
-  .play-now a { background-color: #1e90ff; color: white; padding: 8px 16px; border-radius: 10px; font-weight: bold; }
-  .play-now a:hover { background-color: #7db7ff; color: #0a0a41; }
-  .separador { width: 100%; flex: none; margin-bottom: 15px; display: none;}
-  main { flex-direction: column; }
-  .catalogo { justify-content: center; }
-}
-
-@media (max-width: 801px) {
-  .catalogo { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px; padding: 20px 0 0; }
-  .jogo { width: 100%; max-width: 100%; max-height: 100%; }
-  .intro {padding: 15px; text-align: center;}
-}
-
-@media (max-width: 480px) {
-  .catalogo { grid-template-columns: 1fr; display: grid; }
-  .jogo { width: 100%;}
-  .logotipo { font-size: 20px; }
-}
-
-@media (max-width: 768px) {
-  .search-container { max-width: 90%; }
-  #searchInput { font-size: 0.9rem; padding: 10px 40px 10px 12px; }
-  #clearBtn { font-size: 1rem; }
+img {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+   vertical-align: middle;
 }

@@ -1,587 +1,164 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo Sonic</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kauan - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-
 <body>
-  <header>
-    <audio autoplay loop><source src="Sonic The Hedgehog OST - Green Hill Zone.mp3" type="audio/mp3"></audio>
-    <span class="logotipo">SONIC ZONE</span>
+    <header>
+        <h1 data-aos="fade-down" data-aos-duration="1000">O<span>C</span>N<img src="onda.png" alt="Ocean Logo" class="logo"></h1 >
 
-  <div class="menu-toggle" id="menu-toggle">
-    ☰
-  </div>
+        <nav class="menu-pc">
+            <ul class="menu">
+                <li data-aos="fade-down" data-aos-duration="1500"><a href="#inicio">Início</a></li>
+                <li data-aos="fade-down" data-aos-duration="2000"><a href="#habilidades">Habilidades</a></li>
+                <li data-aos="fade-down" data-aos-duration="2500"><a href="#sobre">Sobre</a></li>
+                <li data-aos="fade-down" data-aos-duration="3000"><a href="#projetos">Projetos</a></li>
+                
+            </ul>
+        </nav>
 
-
-    <nav id="nav">
-      <ul class="nav-link">
-        <li><a href="series.html">Séries</a></li>
-        <li><a href="https://sonichq.net/music/#google_vignette">Música</a></li>
-        <li><a href="#">HQs</a></li>
-        <li><a href="#">Filmes</a></li>
-        <li class="play-now"><a href="https://www.play-games.com/pt/jogo/29357/sonic-the-hedgehog-2.html">Play Now</a></li>
-        </ul>
-    </nav>
-  </header>
-
-  <hr class="div-header">
-
- 
-
-   
-  
-    <section class="intro">
-      <img class="logo-sonic" src="img foda.png" alt="Logo Sonic Zone">
-    <div class="introducao">
-      <h1>Bem-vindo ao Sonic Zone!</h1>
-      <h3>Explore o universo do ouriço mais rápido dos videogames. Aqui você encontrará informações sobre os jogos, personagens, música e muito mais!</h3>
+    <div data-aos="fade-down" data-aos-duration="1000" class="icones">
+        <a href="https://w.app/iez4nt"><img src="zap.png" alt="zap" class="zap-icone"></a>
+        <a href="https://github.com/oceanznx"><img src="github.png" alt="git" class="git-icone"></a>
+        <a href="https://www.linkedin.com/in/kauan-alexandre-rainer-dos-santos-4a1308316/"><img src="linkedin.png" alt="linkedin" class="linkedin-icone"></a>
     </div>
-  </section>
-
-
-  
-<hr>
-    <div class="search">
-<section class="search-bar">
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="🔍 Pesquise um jogo...">
-    <button id="clearBtn">✖</button>
-  </div>
-</section>
-    </div>
-
-    
-
-  <main>
-    <div class="separador">
-       <div class="titulo-catalogo">
-        <h2>Catálogo de Jogos do Sonic</h2>
-        <p class="cat">Descubra os jogos mais icônicos do Sonic the Hedgehog ao longo dos anos. Desde os clássicos 2D até as aventuras em 3D, explore a evolução do ouriço azul!</p>
-      </div>
-      <hr>
-      <br>
-        <section>
-       
-                    <input type="checkbox" value="old" id="oldd" name="pergunta1">
-                    <label for="oldd">Classic Games</label><br>
-                    <input type="checkbox" value="new" id="news" name="pergunta1">
-                    <label for="news">Modern Games</label><br>
-                   
-                    <br>
-                   <hr>
-    <div class="detalhes">
-            <details>
-              <summary>Classic / Adventure Games</summary>
-                <div class="dat">
-                       <p>Sonic the hedgehog</p>
-                       <p>Sonic the hedgehog 2</p>
-                       <p>Sonic CD</p>
-                       <p>Sonic Mania</p>
-                </div>  
-           
-            </details>
-<hr class="div-sa">
-            <details>
-              <summary>3D Games</summary>
-                <div class="dat">
-                       <p>Sonic Adventure 2</p>
-                        <p>Sonic Adventure</p>
-                        <p>Shadow the Hedgehog</p>
-                        <p>Sonic Generations</p>
-                         <p>Sonic Frontiers</p>
-                         <p>Sonic Unleashed</p>
-                          <p>Sonic Heroes</p>
-                    </div> 
-               
-            </details>
-<hr class="div-sa"> 
-            <details>
-              <summary>Race Games</summary>
-                <div class="dat">
-                       <p>Sonic & All-Stars Racing Transformed</p>
-                        <p>Sonic & Sega All-Stars Racing</p>
-                        <p>Sonic Riders</p>
-                        <p>Sonic Riders: Zero Gravity</p>
-                         <p>Sonic & All-Stars Racing Transformed – Mobile</p>
-                    </div>
-            </details>
-<hr class="div-sa"> 
-            <details>
-  <summary>Sonic Mobile Games</summary>
-  <div class="dat">
-    <p>Sonic Dash</p>
-    <p>Sonic Dash 2: Sonic Boom</p>
-    <p>Sonic Forces: Speed Battle</p>
-    <p>Sonic Runners Adventure</p>
-    <p>Sonic & All-Stars Racing Transformed</p>
-    <p>Sonic Jump</p>
-    <p>Sonic Jump Fever</p>
-  </div> 
-</details>
-  <hr class="div-sa"> 
-<details>
-  <summary>Fighting / Batalha</summary>
-  <div class="dat">
-    <p>Sonic Battle</p>
-    <p>Sonic the Fighters </p>
-    <p>Sonic & All-Stars Racing Battle </p>
-  </div>
-</details>
-
-<hr class="div-sa"> 
-<details>
-  <summary>Puzzle / Quebra-cabeça</summary>
-  <div class="dat">
-    <p>Dr. Robotnik’s Mean Bean Machine</p>
-    <p>Sonic Shuffle</p>
-    <p>Sonic Puzzle</p>
-  </div>
-</details>
-
-<hr class="div-sa"> 
-<details>
-  <summary>Party / Minigames</summary>
-  <div class="dat">
-    <p>Sonic Shuffle</p>
-    <p>Sonic & All-Stars Racing Transformed </p>
-    <p>Sonic Boom: Fire & Ice </p>
-  </div>
-</details>
-        </section> 
-
         
-    </div>  
+        
+    </header>
 
+    <main>
+        <section class="inicio" id="inicio">
+            <div class="kauan">
+            <img data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" data-aos-duration="1500" src="Kauan Foto.jpg" alt="Foto de Kauan Alexandre" class="foto-perfil">
+            </div>
+
+            <hr data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" data-aos-duration="2000">
+
+           <div class="eu">
+            <h2 data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" data-aos-duration="2500" class="sub">Aprendendo <span>hoje</span> para desenvolver o <span>amanhã</span>.</h2>
+            <p data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" data-aos-duration="3000" >Desenvolvedor iniciante apaixonado por tecnologia. Hoje estudo front-end e busco evoluir constantemente, me aprofundando na área. Meu objetivo é migrar para o back-end e, no futuro, atuar como desenvolvedor full stack, criando soluções completas e inteligentes.</p>
+            </div>
+        </section>
+
+        <section class="habilidades" id="habilidades">
+            <h2 data-aos="fade-down" data-aos-duration="1600">MINHAS <span>HABILIDADES.</span></h2>
+
+        <div data-aos="fade-up" data-aos-duration="1600"class="content">
+            <div class="html">
+                <img src="html-5.png" alt="HTML5 Logo" class="html-logo">
+                 <h3>HTML</h3>
+                 <p>Tenho conhecimentos básicos de HTML, criando estruturas claras e bem organizadas para minhas páginas.</p>
+            </div>
+
+            <div class="css">
+                <img src="css-3.png" alt="CSS3 Logo" class="css-logo">
+                <h3>CSS</h3>
+                <p>Tenho conhecimentos básicos de CSS, dando estilo e identidade visual às minhas páginas de forma simples e organizada.</p>
+            </div>   
+
+            <div class="js">
+                <img src="script-java.png" alt="JavaScript Logo" class="js-logo">
+                 <h3>JavaScript</h3>
+                 <p>Tenho conhecimentos básicos de JavaScript, adicionando interatividade e tornando minhas páginas mais dinâmicas e funcionais.</p>
+          </div> 
+        </div>   
+           
+        </section>
+
+        <section class="sobre" id="sobre">
+
+           <div class="imagem">
+            <img data-aos="fade-right"
     
+     data-aos-offset="500"
+     data-aos-duration="1500" src="Kauan Foto.jpg" alt="KAUAN" class="foto-sobre">
+            </div> 
+            <div class="sobre-content">
+            <h2 data-aos="fade-right"
     
-    <hr class="sidebar"> 
+     data-aos-offset="500"
+     data-aos-duration="2000">MUITO PRAZER, <br> <span>SOU KAUAN ALEXANDRE.</span></h2>
+            <p data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" data-aos-duration="2000">Meu nome é Kauan Alexandre, terminei o ensino médio recentemente e sou apaixonado por tecnologia. Desde cedo, descobri um interesse especial por programação uma área que me encanta pela possibilidade de criar, resolver problemas e transformar ideias em realidade através do código.
+<br><br>
+Gosto muito de videogames, um hobby que além de me divertir também desperta minha curiosidade sobre como tudo funciona por trás das telas. Hoje estudo desenvolvimento front-end e estou constantemente buscando aprender mais e evoluir como programador. Meu objetivo é me aprofundar ainda mais na área, migrar para o back-end e, no futuro, me tornar um desenvolvedor full stack capaz de criar soluções completas.</p>
+<div data-aos="fade-up" data-aos-duration="2500" data-aos-delay="500" class="contato">
+  <div class="icones">
+        <a href="https://w.app/iez4nt"><img src="zap.png" alt="zap" class="zap-icone"></a>
+        <a href="https://github.com/oceanznx"><img src="github.png" alt="git" class="git-icone"></a>
+        <a href="https://www.linkedin.com/in/kauan-alexandre-rainer-dos-santos-4a1308316/"><img src="linkedin.png" alt="linkedin" class="linkedin-icone"></a>
+    </div>
+    </div>
+            </section>
+            </div>
 
-   
-
-
-
-   
-    <section class="catalogo">
-
-  <div class="jogo">
-    <a class="games" href="sonic1.html">
-      <img src="sonic the hedgehog.png" alt="Sonic The Hedgehog (1991)">
-      <hr>
-      <div class="info">
-        <h4>🎮 Sonic the Hedgehog (1991)</h4>
-        <p>🕹️ Mega Drive / Sega Genesis</p>
-        <p>📅 Ano: 1991</p>
-        <p>O jogo que começou tudo! Sonic corre por cenários coloridos coletando anéis e enfrentando o Dr. Robotnik.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonic2.html">
-      <img src="Sonic2Beta4_1.jpg" alt="Sonic the Hedgehog 2">
-      <hr>
-      <div class="info">
-        <h4>💫 Sonic the Hedgehog 2 (1992)</h4>
-        <p>🕹️ Mega Drive / Sega Genesis</p>
-        <p>📅 Ano: 1992</p>
-        <p>Introduz Tails e o Spin Dash. Um dos jogos mais vendidos da SEGA.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonicgenerations.html">
-      <img src="generation.webp" alt="Sonic Generations">
-      <hr>
-      <div class="info">
-        <h4>🌍 Sonic Generations (2011)</h4>
-        <p>🕹️ PS3 / Xbox 360 / PC</p>
-        <p>📅 Ano: 2011</p>
-        <p>Comemoração dos 20 anos do Sonic, juntando o Sonic clássico e o moderno.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonicmania.html">
-      <img src="sonic mania.jpg" alt="Sonic Mania">
-      <hr>
-      <div class="info">
-        <h4>🏆 Sonic Mania (2017)</h4>
-        <p>🕹️ PS4 / Switch / Xbox / PC</p>
-        <p>📅 Ano: 2017</p>
-        <p>Uma homenagem aos fãs e aos jogos 2D clássicos com novas fases e trilhas nostálgicas.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonicfrontiers.html">
-      <img src="SONIC_FRONTIERS_KeyVisual2_sample.webp" alt="Sonic Frontiers">
-      <hr>
-      <div class="info">
-        <h4>🌌 Sonic Frontiers (2022)</h4>
-        <p>🕹️ PS5 / Xbox Series / Switch / PC</p>
-        <p>📅 Ano: 2022</p>
-        <p>Sonic em mundo aberto! Explore ilhas, resolva enigmas e enfrente inimigos gigantes.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonicheroes.html">
-      <img src="Sonic_Heroes_capa.png" alt="Sonic Heroes">
-      <hr>
-      <div class="info">
-        <h4>🌈 Sonic Heroes (2003)</h4>
-        <p>🕹️ PS2 / GameCube / Xbox</p>
-        <p>📅 Ano: 2003</p>
-        <p>Controle Sonic, Tails e Knuckles, cada um com habilidades únicas, em uma jogabilidade cooperativa divertida.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonicadventure.html">
-      <img src="adventure.jpg" alt="Sonic Adventure">
-      <hr>
-      <div class="info">
-        <h4>🏆 Sonic Adventure (1998)</h4>
-        <p>🕹️ Dreamcast</p>
-        <p>📅 Ano: 1998</p>
-        <p>Primeira aventura 3D completa do Sonic. Mistura ação e exploração com diferentes personagens jogáveis, cada um com sua história.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="shadow.html">
-      <img src="shadow foda.jpg" alt="Shadow the Hedgehog">
-      <hr>
-      <div class="info">
-        <h4>🦔 Shadow the Hedgehog (2005)</h4>
-        <p>🕹️ GameCube / PS2 / Xbox</p>
-        <p>📅 Ano: 2005</p>
-        <p>Jogo solo de Shadow, com ação, tiro e múltiplos finais baseados nas escolhas do jogador, em um tom sombrio e trilha intensa.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="soniccd.html">
-      <img src="Sonic cd.webp" alt="Sonic CD">
-      <hr>
-      <div class="info">
-        <h4>💿 Sonic CD (1993)</h4>
-        <p>🕹️ Sega CD (Mega-CD)</p>
-        <p>📅 Ano: 1993</p>
-        <p>Clássico 2D com viagem no tempo entre passado, presente e futuro. Introduz Amy Rose e Metal Sonic.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonicunleashed.html">
-      <img src="sonic-unleashed-logo-werehog.jpg" alt="Sonic Unleashed">
-      <hr>
-      <div class="info">
-        <h4>🌕 Sonic Unleashed (2008)</h4>
-        <p>🕹️ PS2 / PS3 / Xbox 360 / Wii</p>
-        <p>📅 Ano: 2008</p>
-        <p>Mistura fases rápidas em 3D com combates. À noite, Sonic vira Werehog. Visual e trilha sonora marcantes.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="teamracing.html">
-      <img src="sonic racing.jpg" alt="Team Sonic Racing">
-      <hr>
-      <div class="info">
-        <h4>🏎️ Team Sonic Racing (2019)</h4>
-        <p>🕹️ PS4 / Xbox / Switch / PC</p>
-        <p>📅 Ano: 2019</p>
-        <p>Corrida em kart com foco em equipes, táticas e pistas estilizadas.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonic2006.html">
-      <img src="sonic2006.jpeg" alt="Sonic the Hedgehog (2006)">
-      <hr>
-      <div class="info">
-        <h4>⚡ Sonic the Hedgehog (2006)</h4>
-        <p>🕹️ PS3 / Xbox 360</p>
-        <p>📅 Ano: 2006</p>
-        <p>Título ambicioso em 3D que buscou reiniciar a série, com história dramática e foco cinematográfico.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="blackknight.html">
-      <img src="knight.png" alt="Sonic and the Black Knight">
-      <hr>
-      <div class="info">
-        <h4>🗡️ Sonic and the Black Knight (2009)</h4>
-        <p>🕹️ Wii</p>
-        <p>📅 Ano: 2009</p>
-        <p>Sonic empunha uma espada mágica e enfrenta cavaleiros lendários no mundo do Rei Arthur.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="secretrings.html">
-      <img src="ring.png" alt="Sonic and the Secret Rings">
-      <hr>
-      <div class="info">
-        <h4>🔥 Sonic and the Secret Rings (2007)</h4>
-        <p>🕹️ Wii</p>
-        <p>📅 Ano: 2007</p>
-        <p>Aventura inspirada em “As Mil e Uma Noites”. Sonic corre automaticamente enquanto o jogador controla saltos e ataques.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonicbattle.html">
-      <img src="battle.jpeg" alt="Sonic Battle">
-      <hr>
-      <div class="info">
-        <h4>🥊 Sonic Battle (2003)</h4>
-        <p>🕹️ Game Boy Advance</p>
-        <p>📅 Ano: 2003</p>
-        <p>Jogo de luta com estilo 2D e visual colorido. Introduz o personagem Emerl e sistema de golpes personalizável.</p>
-      </div>
-    </a>
-  </div>
-
-    <!-- Jogos que faltavam - cole depois do último bloco existente -->
-
-  <div class="jogo">
-    <a class="games" href="allstars.html">
-      <img src="all star racing.jpg" alt="Sonic & Sega All-Stars Racing">
-      <hr>
-      <div class="info">
-        <h4>🏎️ Sonic & Sega All-Stars Racing (2010)</h4>
-        <p>🕹️ PS3 / Xbox 360 / Wii / DS / PC</p>
-        <p>📅 Ano: 2010</p>
-        <p>Corrida estilo kart com personagens da SEGA, pistas temáticas e muitos power-ups.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="colours.html">
-      <img src="sonic colours.jpg" alt="Sonic Colors">
-      <hr>
-      <div class="info">
-        <h4>🎨 Sonic Colors (2010)</h4>
-        <p>🕹️ Wii / Nintendo DS</p>
-        <p>📅 Ano: 2010</p>
-        <p>Introduz os Wisps, criaturas que concedem poderes temporários a Sonic. Visual colorido e ritmo dinâmico.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="forces.html">
-      <img src="Forces.webp" alt="Sonic Forces">
-      <hr>
-      <div class="info">
-        <h4>🔥 Sonic Forces (2017)</h4>
-        <p>🕹️ PS4 / Xbox One / Switch / PC</p>
-        <p>📅 Ano: 2017</p>
-        <p>Combina o Sonic clássico e moderno, com fases 3D cheias de ação. Permite criar seu próprio personagem.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonic4.html">
-      <img src="Sonic4.jpg" alt="Sonic the Hedgehog 4: Episode I">
-      <hr>
-      <div class="info">
-        <h4>🎮 Sonic the Hedgehog 4: Episode I (2010)</h4>
-        <p>🕹️ PS3 / Xbox 360 / Wii / iOS / Android</p>
-        <p>📅 Ano: 2010</p>
-        <p>Retorno ao estilo clássico 2D com novas zonas e motor atualizado.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="zerogravity.html">
-      <img src="zero gravity.jpg" alt="Sonic Riders: Zero Gravity">
-      <hr>
-      <div class="info">
-        <h4>🚀 Sonic Riders: Zero Gravity (2008)</h4>
-        <p>🕹️ PS2 / Wii</p>
-        <p>📅 Ano: 2008</p>
-        <p>Corrida em hover-boards com pistas anti-gravidade e mecânicas de voo.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="lostworld.html">
-      <img src="lost world.jpg" alt="Sonic Lost World">
-      <hr>
-      <div class="info">
-        <h4>🌍 Sonic Lost World (2013)</h4>
-        <p>🕹️ Wii U / Nintendo 3DS</p>
-        <p>📅 Ano: 2013</p>
-        <p>Exploração de mundos em forma de esferas, parkour e habilidades especiais.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonic3andknuckles.html">
-      <img src="knucles.avif" alt="Sonic 3 & Knuckles">
-      <hr>
-      <div class="info">
-        <h4>🧊 Sonic 3 & Knuckles (1994)</h4>
-        <p>🕹️ Mega Drive / Genesis</p>
-        <p>📅 Ano: 1994</p>
-        <p>Mescla Sonic 3 e Sonic & Knuckles numa só aventura épica com diversos personagens jogáveis.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="knuckles.html">
-      <img src="knucles 3.jpeg" alt="Sonic & Knuckles">
-      <hr>
-      <div class="info">
-        <h4>🔗 Sonic & Knuckles (1994)</h4>
-        <p>🕹️ Mega Drive / Genesis</p>
-        <p>📅 Ano: 1994</p>
-        <p>Introduz o “lock-on” que permite unir cartuchos e desbloquear modos e personagens.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="rushadventure.html">
-      <img src="rush.jpg" alt="Sonic Rush Adventure">
-      <hr>
-      <div class="info">
-        <h4>🌊 Sonic Rush Adventure (2007)</h4>
-        <p>🕹️ Nintendo DS</p>
-        <p>📅 Ano: 2007</p>
-        <p>Continuação de Sonic Rush com exploração marítima e hover-boards aquáticos.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="teamdream.html">
-      <img src="team dream.jpg" alt="Sonic Dream Team">
-      <hr>
-      <div class="info">
-        <h4>💭 Sonic Dream Team (2023)</h4>
-        <p>🕹️ iOS (Apple Arcade)</p>
-        <p>📅 Ano: 2023</p>
-        <p>Campanha 3D exclusiva para iOS com Sonic e amigos explorando sonhos e orbes.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonicrush.html">
-      <img src="Sonic_Rush_capa.png" alt="Sonic Rush">
-      <hr>
-      <div class="info">
-        <h4>🏁 Sonic Rush (2005)</h4>
-        <p>🕹️ Nintendo DS</p>
-        <p>📅 Ano: 2005</p>
-        <p>Combina 2D clássico com boost de velocidade; introduz Blaze the Cat.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="chronicles.html">
-      <img src="chronic.jpg" alt="Sonic Chronicles">
-      <hr>
-      <div class="info">
-        <h4>🎲 Sonic Chronicles: The Dark Brotherhood (2008)</h4>
-        <p>🕹️ Nintendo DS</p>
-        <p>📅 Ano: 2008</p>
-        <p>RPG pela BioWare com batalhas por turnos e história aprofundada.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="sonicjump.html">
-      <img src="images.jpeg" alt="Sonic Jump">
-      <hr>
-      <div class="info">
-        <h4>📱 Sonic Jump (2012)</h4>
-        <p>🕹️ Android / iOS</p>
-        <p>📅 Ano: 2012</p>
-        <p>Plataforma vertical mobile — pule com Sonic e suba o máximo possível.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="rivals.html">
-      <img src="rivals.jpg" alt="Sonic Rivals">
-      <hr>
-      <div class="info">
-        <h4>🏁 Sonic Rivals (2006)</h4>
-        <p>🕹️ PSP</p>
-        <p>📅 Ano: 2006</p>
-        <p>Corrida e competição direta em portátil com gráficos ágeis.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="advance3.html">
-      <img src="advance.jpg" alt="Sonic Advance 3">
-      <hr>
-      <div class="info">
-        <h4>🎮 Sonic Advance 3 (2004)</h4>
-        <p>🕹️ Game Boy Advance</p>
-        <p>📅 Ano: 2004</p>
-        <p>Versão portátil com duplas entre personagens e habilidades combinadas.</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="jogo">
-    <a class="games" href="riseoflyric.html">
-      <img src="Sonicboomwiiu.jpg" alt="Sonic Boom: Rise of Lyric">
-      <hr>
-      <div class="info">
-        <h4>💥 Sonic Boom: Rise of Lyric (2014)</h4>
-        <p>🕹️ Wii U</p>
-        <p>📅 Ano: 2014</p>
-        <p>Reinvenção da franquia com visual ocidental e foco em ação/co-op.</p>
-      </div>
-    </a>
-  </div>
+        <section class="projetos" id="projetos">
+            <div class="interface">
+            <h2 data-aos="fade-down" data-aos-duration="2000" class="title">MEUS <span>PROJETOS.</span></h2>
+                <div data-aos="fade-up" data-aos-duration="2000" class="flex">
+                    <div class="img-port" style="background-image: url('Sonic\ Site.png');">
+                        <div class="escuro">Catalogo Sonic</div>
+                    </div>
+                    <div class="img-port" style="background-image: url('Sonic\ Site.png');">
+                        <div class="escuro">Catalogo Sonic</div>
+                    </div>
+                    <div class="img-port" style="background-image: url('Sonic\ Site.png');">
+                        <div class="escuro">Catalogo Sonic</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
 
-</section>
+<footer data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" data-aos-duration="1500">
+   <div class="interface">
+    <div class="linha-rodape">
+        <div class="flex">
+        <div class="logo-footer">
+            <h1>O<span>C</span>N<img src="onda.png" alt="Ocean Logo" class="logo"></h1>
+        </div>
+        <div class="icones">
+        <a href="https://w.app/iez4nt"><img src="zap.png" alt="zap" class="zap-icone"></a>
+        <a href="https://github.com/oceanznx"><img src="github.png" alt="git" class="git-icone"></a>
+        <a href="https://www.linkedin.com/in/kauan-alexandre-rainer-dos-santos-4a1308316/"><img src="linkedin.png" alt="linkedin" class="linkedin-icone"></a>
+    </div>
+    </div>
 
-   </main>      
-<hr>
-  <footer> 
-    © 2025 ocean Developer — Site Trabalho Vocação
+    <hr class="div-footer">
+
+     <div class="linha-rodape">
+       <P><i class="gmail"></i> <a href="mailto:rainer25santos@gmail.com"> <img src="gmail.png" alt="Gmail Icon">rainer25santos@gmail.com</a></P>
+
+    </div>
+
+   </div>
 </footer>
 
- <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
